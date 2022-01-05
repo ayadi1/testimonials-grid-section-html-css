@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+  --font-family: "Barlow Semi Condensed", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--Light-grayish-blue);
+  font-size: 13px;
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 150px;
+  display: flex;
+}
+main > div.left {
+  width: 75%;
+}
+main > div.right {
+  width: 25%;
+}
+/* left */
+main > div.left .top {
+  display: flex;
+}
+main > div.left .bottom {
+  display: flex;
+}
+main > div.left .top article:first-child,
+main > div.left .bottom article:last-child {
+  width: 70%;
+}
+main > div.left .bottom article:first-child,
+main > div.left .top article:last-child {
+  width: 30%;
+}
+main article {
+  background-color: red;
+  padding: 30px;
+  margin: 0 30px 30px 0;
+  border-radius: 7px;
+  background-color: var(--Moderate-violet);
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+}
+main article > div.profile {
+  display: flex;
+}
+main article > div.profile > div.img > img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--Light-gray);
+}
+main article > div.profile > div.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+main article > div.profile > div.info > h5 {
+  font-family: var(--font-family);
+  color: var(--White);
+  font-size: 15px;
+}
+main article > div.profile > div.info > p {
+  font-family: var(--font-family);
+  color: var(--White);
+  opacity: 0.5;
+}
+main article > .title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 20px;
+  color: var(--White);
+}
+main article > .text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  margin-top: 20px;
+  color: var(--Light-gray);
+  opacity: 0.7;
+}
+/* footer style */
+footer {
+  text-align: center;
+}
+/* single card style  */
+.top article:last-child {
+  background-color: var(--Very-dark-grayish-blue);
+}
+.top article:first-child {
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position-x: 85%;
+}
+.bottom article:first-child,
+.right article {
+  background-color: var(--White);
+}
+.bottom article:first-child div.profile h5,
+.right article div.profile div.info h5 {
+  color: var(--Very-dark-grayish-blue);
+}
+.bottom article:first-child div.profile p,
+.right article div.profile div.info p {
+  color: var(--Very-dark-grayish-blue);
+  opacity: 0.5;
+}
+.bottom article:first-child .title,
+.right > article > .title {
+  color: var(--Very-dark-grayish-blue);
+}
+/*  */
+.bottom article:last-child {
+  background-color: var(--Very-dark-blackish-blue);
+}
+.bottom article:last-child div.profile h5 {
+  color: var(--White);
+}
+.bottom article:last-child div.profile p {
+  color: var(--White);
+  opacity: 0.5;
+}
+.bottom article:last-child .title {
+  color: var(--White);
+}
+.bottom article:last-child .profile img {
+  border: 1px solid var(--Moderate-violet);
+}
+/* media screen style */
+@media only screen and (max-width: 1200px) {
+  main {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 970px) {
+  main {
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  main {
+    flex-direction: column;
+  }
+  main div.left {
+    width: 100%;
+  }
+  main div.right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  main div.left .top,
+  main div.left .bottom {
+    flex-direction: column;
+    width: 100%;
+  }
+  main > div.left .top article:first-child,
+  main > div.left .bottom article:last-child,
+  main > div.left .bottom article:first-child,
+  main > div.left .top article:last-child {
+    width: 85%;
+    padding: 20px;
+  }
+}
